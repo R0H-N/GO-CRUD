@@ -29,6 +29,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "hello.")
 }
+
 func main() {
 	fileserver := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fileserver)
